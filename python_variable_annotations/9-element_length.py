@@ -6,10 +6,10 @@ the length of the corresponding element in lst and the element itself.
 """
 
 
-from typing import Sequence, List, Tuple
+from typing import Sequence, List, Tuple, Iterable
 
 
-def element_length(lst: Sequence) -> List[Tuple[str, int]]:
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """Returns a list of tuples, where each tuple contains
-    the length of the corresponding element in lst and the element itself."""
+    the length of the corresponding element in lst and the element."""
     return [(i, len(i)) for i in lst]
