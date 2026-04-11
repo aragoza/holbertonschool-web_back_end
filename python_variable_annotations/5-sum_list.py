@@ -5,10 +5,13 @@ floats as argument and returns their sum
 as a float"""
 
 
-def sum_list(input_list: list[float]) -> float:
+from typing import List
+
+
+def sum_list(input_list: List[float]) -> float:
     """Returns the sum of all the floats in 
     input_list as a float."""
-    a = 0.0
+    sum : float = 0.0
     for i in input_list:
-        a += i
-    return a
+        sum += i
+    return sum
