@@ -60,6 +60,11 @@ class Server:
         return row
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
+        """Get the hypermedia pagination
+        """
+        assert (isinstance(page, int) and isinstance(page_size, int))
+        assert (page > 0 and page_size > 0)
+
         total_pages = len(self.dataset()) / page_size
         prev_page = page - 1 if page > 1 else None
         next_page = page + 1 if page + 1 <= total_pages else None
