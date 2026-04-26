@@ -1,2 +1,2 @@
-// update many object in collection school with the name Holberton school and add the pair value address 972 Mission street
+// Set address to "972 Mission street" for all values with the name "Holberton School"
 db.school.updateMany({name : "Holberton school"} , {$set : {address : "972 Mission street"}})
